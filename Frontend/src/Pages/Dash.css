@@ -1,0 +1,29 @@
+.TotalIncome{
+   padding-top: 10px;
+   color: white;
+}
+.paddingAll {
+    padding: 5px;
+    color: white;
+}
+.priceTitle{
+    font-weight: 700;
+    color: white;
+}
+.icon{
+    color: rgb(206, 207, 199);
+}
+.bgcolor{
+    background-color: rgb(185, 182, 182);
+}
+.gradient{
+    background: linear-gradient(185deg, rgba(6,8,40,1) 0%, rgba(69,84,185,1) 100%) !important;
+}
+.lightgradient{
+background: linear-gradient(185deg, rgba(2,36,20,1) 0%, rgba(98,218,89,1) 100%) !important;
+}
+.BlueCard{
+    background: rgb(6,8,40);
+    background: linear-gradient(185deg, rgba(6,8,40,1) 0%, rgba(69,84,185,1) 100%);
+    width: 50%;
+}

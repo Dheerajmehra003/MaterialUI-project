@@ -1,14 +1,113 @@
 import React from 'react'
 import Sidebar from '../Components/Sidebar'
 import Box from "@mui/material/Box";
+import Navbar from '../Components/Navbar'
+import Grid from '@mui/material/Grid2';
+import Card from '@mui/material/Card';
+import CardContent from '@mui/material/CardContent';
+import Typography from '@mui/material/Typography';
+import Stack from '@mui/material/Stack';
+import StorefrontOutlinedIcon from '@mui/icons-material/StorefrontOutlined';
+import CreditCardOutlinedIcon from '@mui/icons-material/CreditCardOutlined';
+import ShoppingBagIcon from '@mui/icons-material/ShoppingBag';
+import "./Dash.css"
+import AccordionDash from '../Components/AccordionDash';
+import Barchart from '../Charts/Barchart';
 
 const Dashboard = () => {
   return (
     <>
-    <Box display='flex'>
+    <div className='bgcolor'>
+     <Navbar />
+     <Box height={70}/>
+     <Box display='flex'>
     <Sidebar/>
-     <h1>DashBoard</h1>
+    <Box component="main" sx={{ flexGrow: 1, p: 3 }}>
+      <Grid container spacing={2} >
+        <Grid size={8}>
+        <Stack spacing={2} direction='row'>
+            <Card sx={{ minWidth: 49 + "%", height: 140,  }} className='gradient'>  
+          <CardContent> 
+            <div className='icon'>
+              <CreditCardOutlinedIcon />
+            </div>
+            <Typography gutterBottom variant="h5" component="div">
+              $500.00
+            </Typography>
+            <Typography gutterBottom variant="body" component="div" sx={{color:'white'}}>
+            Total Earning
+            </Typography>
+          </CardContent>
+          </Card>
+          <Card sx={{ minWidth: 49 + "%", height: 140,  }} className='lightgradient'>   
+          <CardContent> 
+            <div className='icon'>
+              <ShoppingBagIcon />
+            </div>
+            <Typography gutterBottom variant="h5" component="div">
+            $900.00
+            </Typography>
+            <Typography gutterBottom variant="body" component="div" sx={{color:'white'}}>
+            Total Order
+            </Typography>
+          </CardContent>
+          </Card>  
+        </Stack>
+        </Grid>
+        <Grid size={4}>
+        <Stack spacing={2}>
+        <Card sx={{ height: 70, padding:''}} className='gradient'>    
+      <CardContent sx={{padding:'10px'}}>
+      <Stack spacing={1} direction='row'> 
+      <div className='TotalIncome'>
+          <StorefrontOutlinedIcon />
+      </div>
+        <div className='paddingAll'>
+       <span className='priceTitle'>$203k</span> <br/>
+       <span className='PriceSubtitle'>Total Income</span>
+        </div>
+        </Stack>
+      </CardContent>
+    </Card>           
+    <Card sx={{height: 70}}>  
+    <CardContent sx={{padding:'10px'}}>
+      <Stack spacing={1} direction='row'> 
+      <div className='TotalIncome'>
+          <StorefrontOutlinedIcon />
+      </div>
+        <div className='paddingAll'>
+       <span className='priceTitle'>$203k</span> <br/>
+       <span className='PriceSubtitle'>Total Income</span>
+        </div>
+        </Stack>
+      </CardContent>
+      </Card>  
+      </Stack>       
+        </Grid>
+      </Grid>
+      <Box height={20} />
+      <Grid container spacing={2}>
+      <Grid size={8}>
+      <Card sx={{ height: 70 + "vh" }}>  
+      <CardContent> 
+       <Barchart />
+      </CardContent>
+      </Card>
+      </Grid>
+      <Grid size={4}>
+      <Card sx={{ height: 70 + "vh" }}>  
+      <CardContent> 
+      <div className='paddingAll'>
+       <span className='priceTitle'>Popular Products</span>
+        </div>
+      <AccordionDash />
+      </CardContent>
+      </Card>
+      </Grid>
+      </Grid>
     </Box>
+    </Box>
+    </div>
     </>
   )
 }
