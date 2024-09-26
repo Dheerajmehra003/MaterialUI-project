@@ -15,6 +15,7 @@
 }
 .bgcolor{
     background-color: rgb(185, 182, 182);
+    height: 650px;
 }
 .gradient{
     background: linear-gradient(185deg, rgba(6,8,40,1) 0%, rgba(69,84,185,1) 100%) !important;
