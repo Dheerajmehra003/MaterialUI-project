@@ -24,6 +24,7 @@ import {useNavigate} from 'react-router-dom'
 import { useAppStore } from '../AppStore';
 import PeopleAltOutlinedIcon from '@mui/icons-material/PeopleAltOutlined';
 import PollIcon from '@mui/icons-material/Poll';
+import ShoppingCartIcon from '@mui/icons-material/ShoppingCart';
 
 const drawerWidth = 240;
 
@@ -246,7 +247,7 @@ export default function Sidebar() {
             />
           </ListItemButton>
           </ListItem>
-          <ListItem disablePadding sx={{display: 'block'}} onClick={()=>{navigate("/profile")}}>
+          <ListItem disablePadding sx={{display: 'block'}} onClick={()=>{navigate("/product")}}>
           <ListItemButton
             sx={[
               {
@@ -277,10 +278,10 @@ export default function Sidebar() {
                     },
               ]}
             >
-              <AccountCircleOutlinedIcon />
+              <ShoppingCartIcon />
             </ListItemIcon>
             <ListItemText
-              primary="Profile"
+              primary="Product"
               sx={[
                 open
                   ? {

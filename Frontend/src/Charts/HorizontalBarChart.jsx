@@ -15,6 +15,7 @@ export const options = {
     title: "Company performance",
     subtitle: "Based on most recent and previous census data",
   },
+  chartArea: {width: "50%"},
   hAxis: {
     title: "Total Performance",
     minValue: 0,
@@ -22,6 +23,8 @@ export const options = {
   vAxis: {
     title: "City",
   },
+  colors: ['rgb(53,138,148)','rgb(40,34,70)'],
+
   bars: "horizontal",
   axes: {
     y: {
@@ -33,7 +36,7 @@ export const options = {
 export function HorizontalBarChart() {
   return (
     <Chart
-      chartType="Bar"
+      chartType="BarChart"
       width="100%"
       height="100%"
       data={data}

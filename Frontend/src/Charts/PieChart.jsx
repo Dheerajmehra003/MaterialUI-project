@@ -13,6 +13,7 @@ export const data = [
 export const options = {
   title: "My Daily Activities",
   is3D: true,
+  colors: ['rgb(53,138,148)','rgb(37,11,165)','rgb(40,34,70)',"f39f2a", '#188310']
 };
 
 export function PieChart() {

@@ -11,6 +11,7 @@ import "./Dash.css"
 import { GeoChart } from '../Charts/GeoChart';
 import { PieChart } from '../Charts/PieChart';
 import { HorizontalBarChart } from '../Charts/HorizontalBarChart';
+import CountUp from 'react-countup';
 
 const Analytics = () => {
   return (
@@ -30,7 +31,11 @@ const Analytics = () => {
              Visitors
             </Typography>
             <Typography gutterBottom variant="h5" component="div" sx={{color:'white'}}>
-             22000
+            <CountUp
+              delay={0.2}
+              end={160527}
+              duration={1.5} 
+            />
             </Typography>
             <Typography gutterBottom variant="body" component="div" sx={{color:'white'}}>
              Since Last Week
@@ -43,7 +48,11 @@ const Analytics = () => {
              Visitors
             </Typography>
             <Typography gutterBottom variant="h5" component="div" sx={{color:'white'}}>
-             22000
+            <CountUp
+              delay={0.2}
+              end={22000}
+              duration={1.5} 
+            />
             </Typography>
             <Typography gutterBottom variant="body" component="div" sx={{color:'white'}}>
              Since Last Week
@@ -58,7 +67,11 @@ const Analytics = () => {
              Visitors
             </Typography>
             <Typography gutterBottom variant="h5" component="div" sx={{color:'white'}}>
-             20000
+            <CountUp
+              delay={0.2}
+              end={20000}
+              duration={1.5} 
+            />
             </Typography>
             <Typography gutterBottom variant="body" component="div" sx={{color:'white'}}>
              Since Last Week
@@ -71,7 +84,11 @@ const Analytics = () => {
              Visitors
             </Typography>
             <Typography gutterBottom variant="h5" component="div" sx={{color:'white'}}>
-             32000
+            <CountUp
+              delay={0.2}
+              end={32000}
+              duration={1.5} 
+            />
             </Typography>
             <Typography gutterBottom variant="body" component="div" sx={{color:'white'}}>
              Since Last Week

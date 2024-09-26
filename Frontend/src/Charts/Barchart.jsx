@@ -14,7 +14,6 @@ export const data = [
 export const options = {
   chart: {
     title: "Company Performance",
-    subtitle: "Sales, Expenses, and Profit: 2018-2023",
   },
   colors: ['rgb(53,138,148)','rgb(37,11,165)', '#188310']
 };
@@ -24,7 +23,7 @@ export default function Barchart() {
     <Chart
       chartType="Bar"
       width="100%"
-      height="400px"
+      height="330px"
       data={data}
       options={options}
     />
