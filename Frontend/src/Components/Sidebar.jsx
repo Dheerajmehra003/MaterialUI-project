@@ -328,7 +328,7 @@ export default function Sidebar() {
               <SettingsOutlinedIcon />
             </ListItemIcon>
             <ListItemText
-              primary="Setting"
+              primary="Settings"
               sx={[
                 open
                   ? {
