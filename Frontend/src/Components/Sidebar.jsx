@@ -153,7 +153,7 @@ export default function Sidebar() {
             />
           </ListItemButton>
           </ListItem>
-          <ListItem disablePadding sx={{display: 'block'}} onClick={()=>{navigate("/users")}}>
+          {/* <ListItem disablePadding sx={{display: 'block'}} onClick={()=>{navigate("/users")}}>
           <ListItemButton
             sx={[
               {
@@ -199,7 +199,7 @@ export default function Sidebar() {
               ]}
             />
           </ListItemButton>
-          </ListItem>
+          </ListItem> */}
           <ListItem disablePadding sx={{display: 'block'}} onClick={()=>{navigate("/analytics")}}>
           <ListItemButton
             sx={[
@@ -341,7 +341,7 @@ export default function Sidebar() {
             />
           </ListItemButton>
           </ListItem>
-          <ListItem disablePadding sx={{display: 'block'}} onClick={()=>{navigate("/about")}}>
+          {/* <ListItem disablePadding sx={{display: 'block'}} onClick={()=>{navigate("/about")}}>
           <ListItemButton
             sx={[
               {
@@ -387,7 +387,7 @@ export default function Sidebar() {
               ]}
             />
           </ListItemButton>
-          </ListItem>
+          </ListItem> */}
         </List>
       </Drawer>
     </Box>

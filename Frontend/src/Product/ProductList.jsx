@@ -30,6 +30,7 @@ import Autocomplete from "@mui/material/Autocomplete";
 import Modal from '@mui/material/Modal';
 import AddForm from './AddForm';
 import { useAppStore } from '../AppStore';
+import EditForm from './EditForm';
 
 const style = {
     position: 'absolute',
@@ -48,8 +49,12 @@ export default function ProductList() {
   const [rowsPerPage, setRowsPerPage] = useState(10);
   const empCollectionRef = collection(db, "products");
   const [open, setOpen] = useState(false);
+  const [editOpen, setEditOpen] = useState(false);
+  const [formId, setFormId] = useState("");
   const handleOpen = () => setOpen(true);
+  const handleEditOpen = () => setEditOpen(true);
   const handleClose = () => setOpen(false);
+  const handleEditClose = () => setEditOpen(false);
   const setRows = useAppStore((state) => state.setRows);
   const rows = useAppStore((state) => state.rows);
 
@@ -104,6 +109,17 @@ export default function ProductList() {
     }
   };
 
+  const editUser = (id, name, price, category) => {
+    const data = {
+      id: id,
+      name: name,
+      price: price,
+      category: category,
+    };
+    setFormId(data);
+    handleEditOpen();
+  };
+
   return (
     <>
     <div>
@@ -115,6 +131,16 @@ export default function ProductList() {
     >
       <Box sx={style}>
        <AddForm closeEvent={handleClose}/>
+      </Box>
+    </Modal>
+    <Modal
+      open={editOpen}
+      onClose={handleEditClose}
+      aria-labelledby="modal-modal-title"
+      aria-describedby="modal-modal-description"
+    >
+      <Box sx={style}>
+       <EditForm  closeEvent={handleEditClose}  fid={formId}/>
       </Box>
     </Modal>
   </div>
@@ -195,6 +221,9 @@ export default function ProductList() {
                               }}
                               className="cursor-pointer"
                               // onClick={() => editUser(row.id)}
+                              onClick={()=>{
+                                editUser(row.id, row.name, row.price, row.category);
+                              }}
                             />
                             <DeleteIcon
                               style={{

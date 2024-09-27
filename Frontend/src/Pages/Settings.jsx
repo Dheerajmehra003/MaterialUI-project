@@ -2,16 +2,21 @@ import React from 'react'
 import Box from "@mui/material/Box";
 import Sidebar from '../Components/Sidebar'
 import Navbar from '../Components/Navbar'
+import List from '../Settings/List';
+import "./Dash.css"
+
 
 const Settings = () => {
   return (
     <>
-     <Navbar />
+    <div className='bgcolor'>
+    <Navbar />
      <Box height={70}/>
       <Box display='flex'>
       <Sidebar/>
-      <h1>settings</h1>
+       <List />
     </Box>
+    </div>
     </>
   )
 }
